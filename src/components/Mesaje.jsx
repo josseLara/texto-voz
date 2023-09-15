@@ -18,7 +18,7 @@ function Mensaje() {
 
           try {
                setLoading( true )
-               const data = await fetcher( [import.meta.env.VITE_URL,
+               const data = await fetcher( [import.meta.env.VITE_ENDPOINT,
                { mensaje: mensajeRef.current.value, idioma: IDIOMAS[selectionRef.current.value][2] }] )
                console.log( data )
                if ( data?.status ) {
@@ -32,7 +32,7 @@ function Mensaje() {
                setLoading( false )
 
           }
-          mutate( import.meta.env.VITE_URL )
+          mutate( import.meta.env.VITE_ENDPOINT )
      }
 
      return (

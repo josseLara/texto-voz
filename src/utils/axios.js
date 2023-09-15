@@ -28,7 +28,7 @@ export const fetcher = async ( args ) => {
      return res.data;
 };
 
-
+// -----------------------------------------------------------------------
 const encodedParamsHandler = ({mensaje,idioma}) => {
      const encodedParams = new URLSearchParams();
      encodedParams.set( 'voice_code', idioma ?? 'en-US-1' );
@@ -36,7 +36,6 @@ const encodedParamsHandler = ({mensaje,idioma}) => {
      encodedParams.set( 'speed', '1.00' );
      encodedParams.set( 'pitch', '1.00' );
      encodedParams.set( 'output_type', 'audio_url' );
-
 
      return encodedParams;
 }
